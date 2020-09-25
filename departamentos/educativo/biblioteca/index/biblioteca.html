@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../conexion/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1>CENTRO DE REHABILITACIÓN SOCIAL DE TULCAN</h1>
+            <h2>BIBLIOTECA</h2>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="#">SNAI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../../index/educativo.html">Educativo <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ingresos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ingresoLibros">Libro nuevo</a>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+        <div class="row">
+          <section class="">
+            <!-- Modal -->
+            <div class="modal fade" id="ingresoLibros" tabindex="-1" aria-labelledby="ingresoLibrosLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="ingresoLibrosLabel">Ingreso de libro nuevo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="" id="formIngresoLibros">
+                      <table >
+                        <tr>
+                          <td>
+                            <label for="">Nombre del libro</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Nombre del libro">
+                          </td>
+                          <td>
+                            <label for="">Autor</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Autor">
+                          </td>
+                          <td>
+                            <label for="">Edición</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Edición">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label for="">IBSN</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="IBSN">
+                          </td>
+                          <td>
+                            <label for="">Cutter</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Cutter">
+                          </td>
+                          <td>
+                            <label for="">Dewey</label> 
+                          </td>
+                          <td>
+                            <select name="" id="">
+                              <option value="0">--Dewey--</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label for="">Año de fabricación</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Año de fabricación">
+                          </td>
+                          <td>
+                            <label for="">Fecha Ingreso</label> 
+                          </td>
+                          <td>
+                            <input type="date" placeholder="Fecha Ingreso">
+                          </td>
+                          <td>
+                            <label for="">Código</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Código">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label for="">Pais</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Pais">
+                          </td>
+                          <td>
+                            <label for="">Editorial</label> 
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Editorial">
+                          </td>
+                        </tr>
+                      </table>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Guardar libro</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive-sm">
+              <table class="tableLibros table-sm">
+                <thead>
+                  <tr>
+                    <th>
+                      Nombre de libro
+                    </th>
+                    <th>
+                      Autor
+                    </th>
+                    <th>
+                      Edicion
+                    </th>
+                    <th>
+                      IBSN
+                    </th>
+                    <th>
+                      Cutter
+                    </th>
+                    <th>
+                      Dewey
+                    </th>
+                    <th>
+                      Año fabricación
+                    </th>
+                    <th>
+                      Fecha ingreso
+                    </th>
+                    <th>
+                      Código
+                    </th>
+                    <th>
+                      País
+                    </th>
+                    <th>
+                      Editorial
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+    </div>
+    <footer>
+      <div class="jumbotron text-center" style="margin-bottom:0">
+          <p>Footer</p>
+      </div>
+    </footer>
+  </body>
+  <script src="../../../../conexion/js/jquery-3.5.1.min.js"></script>
+  <script src="../../../../conexion/bootstrap/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+</html>

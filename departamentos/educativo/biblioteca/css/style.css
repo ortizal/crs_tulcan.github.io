@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(0, 123, 255, 20%);
+    background-color: rgba(172, 175, 124, 0.542);
 }
 header{
     border: 3px black solid;
@@ -7,7 +7,6 @@ header{
     margin: 1em auto;
     text-align: center;
 }
-.fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+section table thead tr th{
+    text-align: center;
+}
