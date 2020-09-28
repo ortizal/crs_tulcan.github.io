@@ -10,3 +10,6 @@ header{
 section table thead tr th{
     text-align: center;
 }
+.modal{
+    border-radius: 16px;
+}

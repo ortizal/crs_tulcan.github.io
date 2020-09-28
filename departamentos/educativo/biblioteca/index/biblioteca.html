@@ -54,19 +54,19 @@
                             <label for="">Nombre del libro</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Nombre del libro">
+                            <input type="text" placeholder="Nombre del libro" name="nombreLibro">
                           </td>
                           <td>
                             <label for="">Autor</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Autor">
+                            <input type="text" placeholder="Autor" name="autor">
                           </td>
                           <td>
                             <label for="">Edición</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Edición">
+                            <input type="text" placeholder="Edición" name="edicion">
                           </td>
                         </tr>
                         <tr>
@@ -74,20 +74,19 @@
                             <label for="">IBSN</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="IBSN">
+                            <input type="text" placeholder="IBSN" name="ibsn">
                           </td>
                           <td>
                             <label for="">Cutter</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Cutter">
+                            <input type="text" placeholder="Cutter" name="cutter">
                           </td>
                           <td>
                             <label for="">Dewey</label> 
                           </td>
                           <td>
-                            <select name="" id="">
-                              <option value="0">--Dewey--</option>
+                            <select name="dewey" id="dewey">
                             </select>
                           </td>
                         </tr>
@@ -96,19 +95,19 @@
                             <label for="">Año de fabricación</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Año de fabricación">
+                            <input type="text" placeholder="Año de fabricación" name="aFabricacion">
                           </td>
                           <td>
                             <label for="">Fecha Ingreso</label> 
                           </td>
                           <td>
-                            <input type="date" placeholder="Fecha Ingreso">
+                            <input type="date" placeholder="Fecha Ingreso" name="fechaIngreso">
                           </td>
                           <td>
                             <label for="">Código</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Código">
+                            <input type="text" placeholder="Código" name="codigo">
                           </td>
                         </tr>
                         <tr>
@@ -116,19 +115,19 @@
                             <label for="">Pais</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Pais">
+                            <input type="text" placeholder="Pais" name="pais">
                           </td>
                           <td>
                             <label for="">Editorial</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Editorial">
+                            <input type="text" placeholder="Editorial" name="editorial">
                           </td>
                           <td>
                             <label for="">Número de libros</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Número de libros">
+                            <input type="text" placeholder="Número de libros" name="numeroLibros">
                           </td>
                         </tr>
                         <tr>
@@ -136,22 +135,24 @@
                             <label for="">Estado</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Estado">
+                            <select name="estado" id="estadoLibros" name="estado">
+
+                            </select>
                           </td>
                           <td>
                             <label for="">Páginas</label> 
                           </td>
                           <td>
-                            <input type="text" placeholder="Páginas">
+                            <input type="text" placeholder="Páginas" name="paginas">
                           </td>
                         </tr>
                       </table>
                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <input type="submit" class="btn btn-primary" value="Guardar libro" id="guardarLibro">
+                    </div>
                   </form>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Guardar libro</button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -210,4 +211,5 @@
   </body>
   <script src="../../../../conexion/js/jquery-3.5.1.min.js"></script>
   <script src="../../../../conexion/bootstrap/bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
 </html>
