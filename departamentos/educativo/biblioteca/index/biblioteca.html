@@ -46,7 +46,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="" id="formIngresoLibros">
+                  <form type="POST" id="formIngresoLibros">
                     <div class="modal-body">
                       <table >
                         <tr>
@@ -102,12 +102,6 @@
                           </td>
                           <td>
                             <input type="date" placeholder="Fecha Ingreso" name="fechaIngreso">
-                          </td>
-                          <td>
-                            <label for="">Código</label> 
-                          </td>
-                          <td>
-                            <input type="text" placeholder="Código" name="codigo">
                           </td>
                         </tr>
                         <tr>
@@ -185,9 +179,6 @@
                       Fecha ingreso
                     </th>
                     <th>
-                      Código
-                    </th>
-                    <th>
                       País
                     </th>
                     <th>
@@ -195,7 +186,7 @@
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="listadoLibros">
     
                 </tbody>
               </table>
