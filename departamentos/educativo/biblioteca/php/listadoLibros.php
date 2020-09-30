@@ -6,7 +6,7 @@ function listBooks(){
     $respLibro=$conexion->query($query);
     //$listadoLibros="<tr><td></td></tr>";
     while($row=$respLibro->fetch_array(MYSQLI_ASSOC)){
-        $listadoLibros.=("<tr>
+        echo $listadoLibros=("<tr>
                             <td>$row[nombreLibro]</td>
                             <td>$row[autor]</td>
                             <td>$row[edicion]</td>
@@ -21,6 +21,6 @@ function listBooks(){
     }
     return $listadoLibros;
 }
-echo listBooks();
+return listBooks();
 
 ?>
