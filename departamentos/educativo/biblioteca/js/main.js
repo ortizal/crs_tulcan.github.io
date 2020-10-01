@@ -14,22 +14,17 @@ $(document).ready(function(){
             $('#estadoLibros').html(r);
         }
     });
-    $.ajax({
-        type:'POST',
-        url:'../php/listadoLibros.php',
-        success:function(listaLibros){
-                $("#listadoLibros").html(listaLibros);
-        }
-    });
+    listarLibros();
     $("#guardarLibro").click(function(){
         var formIngreso = $("#formIngresoLibros").serialize();
         $.ajax({
             type:'POST',
             url:'../php/ingresoLibros.php',
             data:formIngreso,
-            success:function(re){
-                if (re==1){
+            success:function(r){
+                if (r==1){
                     alert("Libro Ingresado");
+                    listarLibros();
                 }
                 else{
                     alert("Error al ingresar los libros");
@@ -37,6 +32,17 @@ $(document).ready(function(){
     
             }
         });
-        return false;
     })
 });
+function listarLibros(){
+    $.ajax({
+        type:'POST',
+        url:'../php/listadoLibros.php',
+        success:function(listaLibros){
+                $("#listadoLibros").html(listaLibros);
+        }
+    });
+}
+$("#idEducativo").click(function(){
+    alert("Página aún no habilitada");
+})
