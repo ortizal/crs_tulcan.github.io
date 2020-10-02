@@ -1,5 +1,5 @@
 <?php
-require_once ('../../../../conexion/conexion.php');
+require ('../../../../conexion/conexion.php');
     $conexion=getConn();
     $nombreLibro=$_POST['nombreLibro'];
     $autor=$_POST['autor'];

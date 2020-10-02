@@ -46,79 +46,86 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form type="post" id="formIngresoLibros">
+                  <form type="" id="formIngresoLibros">
                     <div class="modal-body">
                       <div class="row">
                         <div class="col-sm">
                           <label for="">Nombre del libro <br> 
-                            <input type="text" name="nombreLibro" placeholder="NOMBRE DEL LIBRO">
+                            <input class="intoLibros" type="text" name="nombreLibro" placeholder="NOMBRE DEL LIBRO">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Autor <br> 
-                            <input type="text" name="autor" placeholder="AUTOR">
+                            <input class="intoLibros" type="text" name="autor" placeholder="AUTOR">
                           </label>
                         </div> 
                         <div class="col-sm">
                           <label for="">Edición <br> 
-                            <input type="text" name="edicion" placeholder="EDICIÓN">
+                            <input class="intoLibros" type="text" name="edicion" placeholder="EDICIÓN">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">IBSN <br> 
-                            <input type="text" name="ibsn" placeholder="IBSN">
+                            <input class="intoLibros" type="text" name="ibsn" placeholder="IBSN">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Cutter <br> 
-                            <input type="text" name="cutter" placeholder="CUTTER">
+                            <input class="intoLibros" type="text" name="cutter" placeholder="CUTTER">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Dewey <br> 
-                            <select type="text" name="dewey" id="dewey">
+                            <select class="intoLibros" type="text" name="dewey" id="dewey">
+                            </select>
+                          </label>
+                        </div>
+                        <div class="col-sm">
+                          <label for="">SubDewey <br> 
+                            <select class="intoLibros" type="text" name="subdewey" id="subdewey">
                             </select>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Año de fabricación <br>
-                            <input type="text" name="aFabricacion" placeholder="AÑO DE FABRICACIÓN">
+                            <input class="intoLibros" type="text" name="aFabricacion" placeholder="AÑO DE FABRICACIÓN">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Fecha de ingreso <br>
-                            <input type="date" name="fechaIngreso" placeholder="FECHA DE INGRESO">
+                            <input class="intoLibros" type="date" name="fechaIngreso" placeholder="FECHA DE INGRESO">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Pais <br>
-                            <input type="text" name="pais" placeholder="PAIS">
+                            <input class="intoLibros" type="text" name="pais" placeholder="PAIS">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Editorial <br>
-                            <input type="text" name="editorial" placeholder="EDITORIAL">
+                            <input class="intoLibros" type="text" name="editorial" placeholder="EDITORIAL">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Número de libros <br>
-                            <input type="text" name="numeroLibros" placeholder="NÚMERO DE LIBROS">
+                            <input class="intoLibros" type="text" name="numeroLibros" placeholder="NÚMERO DE LIBROS">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Estado<br>
-                            <select name="" id="estadoLibros" name="estado">
+                            <select class="intoLibros" id="estadoLibros" name="estado">
                             </select>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Páginas<br>
-                            <input type="text" name="paginas" placeholder="PAGINAS">
+                            <input class="intoLibros" type="text" name="paginas" placeholder="PAGINAS">
                           </label>
                         </div>
                       </div>
                     </div>
                     <div class="modal-footer">
+                      <button type="button" class="btn btn-secundary" id="reset">Limpiar campos</button>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary" value="" id="guardarLibro" data-dismiss="modal">Guardar libro</button>
                     </div>
