@@ -5,7 +5,7 @@ function listBooks(){
     $query="SELECT * FROM libro INNER JOIN dewey 
             ON libro.dewey_iddewey = dewey.iddewey";
     $respLibro=$conexion->query($query);
-    //$listadoLibros="<tr><td></td></tr>";
+    $listadoLibros="<tr><td></td></tr>";
     while($row=$respLibro->fetch_array(MYSQLI_ASSOC)){
         echo $listadoLibros=("<tr>
                             <td>$row[nombreLibro]</td>

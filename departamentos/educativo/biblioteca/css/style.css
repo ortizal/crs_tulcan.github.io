@@ -17,3 +17,6 @@ footer
 {
     width:100%;
 }
+form input{
+    text-transform: uppercase;
+}

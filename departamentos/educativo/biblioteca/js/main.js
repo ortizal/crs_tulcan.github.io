@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#divSubdewey").hide();
     $.ajax({
         type:'POST',
         url:'../php/dewey.php'
@@ -11,17 +12,24 @@ $(document).ready(function(){
     })
     $("#dewey").on('change',function(){
         var id = $("#dewey").val();
-        $.ajax({
-            type:'POST',
-            url:'../php/subdewey.php',
-            data:{'id':id}
-        })
-        .done(function(listaDewey){
-            $("#subdewey").html(listaDewey);
-        })
-        .fail(function(){
-            alert("Error al cargar el subdewey")
-        })
+        if (id == 1){
+            $("#divSubdewey").show();
+            $.ajax({
+                type:'POST',
+                url:'../php/subdewey.php',
+                data:{'id':id}
+            })
+            .done(function(listaDewey){
+                /* $("#divSubdewey").show(); */
+                $("#subdewey").html(listaDewey);
+            })
+            .fail(function(){
+                alert("Error al cargar el subdewey")
+            })
+        }
+        else{
+            $("#divSubdewey").hide();
+        }
     });
     $.ajax({
         type:'POST',
@@ -33,6 +41,8 @@ $(document).ready(function(){
     listarLibros();
     $("#guardarLibro").click(function(){
         var formIngreso = $("#formIngresoLibros").serialize();
+        alert(formIngreso);
+        return false;
         $.ajax({
             type:'POST',
             url:'../php/ingresoLibros.php',
@@ -68,4 +78,5 @@ $("#idEducativo").click(function(){
 })
 $("#reset").click(function reset(){
     $(".intoLibros").val("");
+    $("#divSubdewey").hide();
 })
