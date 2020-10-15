@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../conexion/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Document</title>
+    <title>Ingreso de libros</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -31,10 +31,19 @@
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ingresoLibros">Libro nuevo</a>
                     </div>
                   </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Prestamos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="mensaje dropdown-item" href="#" data-toggle="modal" data-target="#">Registro de prestamo</a>
+                      <a class="mensaje dropdown-item" href="#" data-toggle="modal" data-target="#">Libros prestados</a>
+                    </div>
+                  </li>
               </ul>
             </div>
         </nav>
-        <div class="row">
+        <div class="contenidos row">
           <section class="">
             <!-- Modal -->
             <div class="modal fade" id="ingresoLibros" tabindex="-1" aria-labelledby="ingresoLibrosLabel" aria-hidden="true">
@@ -51,75 +60,75 @@
                       <div class="row">
                         <div class="col-sm">
                           <label for="">Nombre del libro <br> 
-                            <input class="intoLibros" type="text" name="nombreLibro" placeholder="NOMBRE DEL LIBRO">
+                            <input class="intoLibros" type="text" name="nombreLibro" placeholder="NOMBRE DEL LIBRO" autocomplete="off">
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Autor <br> 
-                            <input class="intoLibros" type="text" name="autor" placeholder="AUTOR">
+                            <input class="intoLibros" type="text" name="autor" placeholder="AUTOR" autocomplete="off" required>
                           </label>
                         </div> 
                         <div class="col-sm">
                           <label for="">Edición <br> 
-                            <input class="intoLibros" type="text" name="edicion" placeholder="EDICIÓN">
+                            <input class="intoLibros" type="text" name="edicion" placeholder="EDICIÓN" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">IBSN <br> 
-                            <input class="intoLibros" type="text" name="ibsn" placeholder="IBSN">
+                            <input class="intoLibros" type="text" name="ibsn" placeholder="IBSN" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Cutter <br> 
-                            <input class="intoLibros" type="text" name="cutter" placeholder="CUTTER">
+                            <input class="intoLibros" type="text" name="cutter" placeholder="CUTTER" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Dewey <br> 
-                            <select class="intoLibros" type="text" name="dewey" id="dewey">
+                            <select class="intoLibros" type="text" name="dewey" id="dewey" required>
                             </select>
                           </label>
                         </div>
                         <div class="col-sm" id="divSubdewey">
-                          <label for="">SubDewey <br> 
-                            <select class="intoLibros" type="text" name="subdewey" id="subdewey">
+                          <label for="">Sub-Dewey <br> 
+                            <select class="intoLibros" type="text" name="subdewey" id="subdewey" required>
                             </select>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Año de fabricación <br>
-                            <input class="intoLibros" type="text" name="aFabricacion" placeholder="AÑO DE FABRICACIÓN">
+                            <input class="intoLibros" type="text" name="aFabricacion" placeholder="AÑO DE FABRICACIÓN" autocomplete="off" required> 
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Fecha de ingreso <br>
-                            <input class="intoLibros" type="date" name="fechaIngreso" placeholder="FECHA DE INGRESO">
+                            <input class="intoLibros" type="date" name="fechaIngreso" placeholder="FECHA DE INGRESO" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Pais <br>
-                            <input class="intoLibros" type="text" name="pais" placeholder="PAIS">
+                            <input class="intoLibros" type="text" name="pais" placeholder="PAIS" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Editorial <br>
-                            <input class="intoLibros" type="text" name="editorial" placeholder="EDITORIAL">
+                            <input class="intoLibros" type="text" name="editorial" placeholder="EDITORIAL" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Número de libros <br>
-                            <input class="intoLibros" type="text" name="numeroLibros" placeholder="NÚMERO DE LIBROS">
+                            <input class="intoLibros" type="text" name="numeroLibros" placeholder="NÚMERO DE LIBROS" autocomplete="off" required>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Estado<br>
-                            <select class="intoLibros" id="estadoLibros" name="estado">
+                            <select class="intoLibros" id="estadoLibros" name="estado" required>
                             </select>
                           </label>
                         </div>
                         <div class="col-sm">
                           <label for="">Páginas<br>
-                            <input class="intoLibros" type="text" name="paginas" placeholder="PAGINAS">
+                            <input class="intoLibros" type="text" name="paginas" placeholder="PAGINAS" autocomplete="off" required>
                           </label>
                         </div>
                       </div>
@@ -134,7 +143,7 @@
               </div>
             </div>
             <div class="table-responsive-sm">
-              <table class="tableLibros table-sm">
+              <table class="tableLibros table-sm table-striped table-hover" >
                 <thead>
                   <tr>
                     <th>

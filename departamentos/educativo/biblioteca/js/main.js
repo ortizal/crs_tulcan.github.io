@@ -76,6 +76,9 @@ function limpiarFormulario(){
 $("#idEducativo").click(function(){
     alert("Página aún no habilitada");
 })
+$(".mensaje").click(function(){
+    alert("Página aún no habilitada");
+})
 $("#reset").click(function reset(){
     $(".intoLibros").val("");
     $("#divSubdewey").hide();

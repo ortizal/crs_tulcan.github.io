@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(172, 175, 124, 0.542);
+    background-color: rgb(105, 182, 196);
 }
 header{
     border: 3px black solid;
@@ -19,4 +19,11 @@ footer
 }
 form input{
     text-transform: uppercase;
+}
+.tableLibros {
+    width: 100px;
+    margin: 0 auto;
+  }
+.contenidos{
+    justify-content: center;
 }
