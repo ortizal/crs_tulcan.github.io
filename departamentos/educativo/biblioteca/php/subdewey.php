@@ -7,7 +7,7 @@ function getSubDewey(){
     $respuestado=$conexion->query($query);
     $subDewey.="<option value='0'>--Selecciona--</option>";
     while($row=$respuestado->fetch_array(MYSQLI_ASSOC)){
-        $subDewey.="<option value='$row[iddewey]'>$row[codigo]-$row[subdewey]</option>";
+        $subDewey.="<option value='$row[idsubdewey]'>$row[codigo]-$row[subdewey]</option>";
     }
     return $subDewey;
 }
