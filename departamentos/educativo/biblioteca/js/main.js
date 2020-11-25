@@ -41,14 +41,14 @@ $(document).ready(function(){
     listarLibros();
     $("#guardarLibro").click(function(){
         var formIngreso = $("#formIngresoLibros").serialize();
-        // alert(formIngreso);
-        // return false;
+        //alert(formIngreso);
+        //return false;
         $.ajax({
             type:'POST',
             url:'../php/ingresoLibros.php',
             data:formIngreso,
-            success:function(r){
-                if (r==1){
+            success:function(respuestaIngreso){
+                if (respuestaIngreso==1){
                     alert("Libro Ingresado");
                     listarLibros();                
                 }
