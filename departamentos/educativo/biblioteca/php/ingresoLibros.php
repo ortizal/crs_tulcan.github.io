@@ -15,8 +15,13 @@ require ('../../../../conexion/conexion.php');
     $numeroLibros=$_POST['numeroLibros'];
     $estado=$_POST['estado'];
     $paginas=$_POST['paginas'];
-    $query="INSERT INTO libro(nombreLibro,autor,edicion,ibsn,cutter,anoFabricacion,fechaIngreso,pais,editorial,dewey_iddewey,subdewey_idsubdewey,numeroLibros,paginas,estado_idestado) 
+    if ( empty($subDewey)){
+        $query="INSERT INTO libro(nombreLibro,autor,edicion,ibsn,cutter,anoFabricacion,fechaIngreso,pais,editorial,dewey_iddewey,numeroLibros,paginas,estado_idestado) 
+                    VALUES ('$nombreLibro','$autor','$edicion','$ibsn','$cutter','$aFabricacion','$fechaIngreso','$pais','$editorial','$dewey','$numeroLibros','$pais','$estado')";
+    }else {
+        $query="INSERT INTO libro(nombreLibro,autor,edicion,ibsn,cutter,anoFabricacion,fechaIngreso,pais,editorial,dewey_iddewey,subdewey_idsubdewey,numeroLibros,paginas,estado_idestado) 
                     VALUES ('$nombreLibro','$autor','$edicion','$ibsn','$cutter','$aFabricacion','$fechaIngreso','$pais','$editorial','$dewey','$subDewey','$numeroLibros','$pais','$estado')";
+    }
     $ingresoLibros=mysqli_query($conexion, $query);
     echo $ingresoLibros;
 ?>

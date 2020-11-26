@@ -28,6 +28,7 @@ $(document).ready(function(){
             })
         }
         else{
+        
             $("#divSubdewey").hide();
         }
     });
@@ -41,8 +42,8 @@ $(document).ready(function(){
     listarLibros();
     $("#guardarLibro").click(function(){
         var formIngreso = $("#formIngresoLibros").serialize();
-        //alert(formIngreso);
-        //return false;
+        // alert(formIngreso);
+        // return false;
         $.ajax({
             type:'POST',
             url:'../php/ingresoLibros.php',
